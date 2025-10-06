@@ -97,7 +97,7 @@ MIT
 ## Author
 
 **Sai**  
-AI/ML Learner & Full Stack Developer  
+AI/ML Learner  
 GitHub: [sai-AIstacker](https://github.com/sai-AIstacker)  
 Live App: [dataset-detective.vercel.app](https://dataset-detective.vercel.app/)
 
