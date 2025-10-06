@@ -1,63 +1,68 @@
-# Dataset Detective
+# test changed
+# <img src="public/icon.jpg" alt="Dataset Detective Logo" width="40" height="40" style="vertical-align:middle;margin-right:8px;"> Dataset Detective
 
-A production‑ready Next.js application for fast, visual Exploratory Data Analysis (EDA) on any CSV file. It features a polished glassmorphic UI, smooth micro‑interactions, and exportable analysis reports designed for clarity, performance, and reliability.
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen?style=flat-square)](https://dataset-detective.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Dataset--Detector-black?style=flat-square)](https://github.com/sai-AIstacker/Dataset-Detector)
 
-## Highlights
+---
 
-- Any‑Dataset EDA
-  - Robust CSV parsing with tolerant type inference (numeric vs categorical) and unioning of columns across rows
-  - Missingness metrics per column and overall completeness
-  - Numeric statistics: count, mean, median, std; categorical: uniques and frequency insights
-  - Correlation matrix with top correlations
-  - Per‑numeric histograms for distribution analysis
-- Beautiful, Responsive UI/UX
-  - Glass cards, subtle neon accents, animated borders for upload and actions
-  - Splash intro and graceful transitions
-  - Accessible components with clear focus states and high contrast
-- Exportable Reports
-  - One‑click PNG export of the interactive analysis (html-to-image with `skipFonts: true` to avoid cross‑origin CSS issues)
-- Performance & Stability
-  - Memoized computations, careful rendering of chart subsets, and CSS-only animations where possible
+**Dataset Detective** is a production-grade web application for automated, visual Exploratory Data Analysis (EDA) on any CSV file  
+Designed for rapid insight, it features a glassmorphic interface, micro-interactions, and exportable analysis reports.  
+Access the live application: [dataset-detective.vercel.app](https://dataset-detective.vercel.app/)
 
-## Tech Stack
+---
 
-- Framework: Next.js (App Router), React 19, TypeScript
-- Styling: Tailwind CSS v4, shadcn/ui
-- Charts: Recharts
-- CSV Parsing: PapaParse
-- Export: html-to-image
+## Approach
 
-## Getting Started
+As an AI/ML learner, my focus is on automating the EDA workflow.  
+Dataset Detective enables instant, code-free analysis of any dataset, surfacing key metrics, correlations, and distributions.  
+The platform is engineered for reliability, clarity, and performance, supporting both quick exploration and in-depth reporting.
 
-Prerequisites: Node.js 18+ and your package manager of choice (pnpm or npm).
+---
 
-Install:
-- pnpm install
-- or: npm install
+## Features
 
-Run:
-- pnpm dev
-- or: npm run dev
-Open http://localhost:3000
+- Universal CSV parsing with tolerant type inference and column unioning
+- Missingness metrics per column and overall completeness
+- Numeric statistics: count, mean, median, standard deviation
+- Categorical insights: unique values and frequency analysis
+- Correlation matrix with top relationships
+- Per-numeric histograms for distribution visualization
+- Glassmorphic UI with animated transitions and accessibility support
+- One-click export of interactive analysis as PNG (cross-origin safe)
+- Optimized rendering and memoized computations for stability
 
-Build:
-- pnpm build && pnpm start
-- or: npm run build && npm start
+---
+
+## Usage
+
+Visit [dataset-detective.vercel.app](https://dataset-detective.vercel.app/)  
+Upload your CSV file and immediately explore your data with automated EDA tools.  
+Export your analysis as a PNG report for sharing or documentation.
+
+---
 
 ## Project Structure
 
-- app/ — App Router pages and layout
-- components/ — Feature components (upload, phase-one, phase-two, charts, etc.)
-- components/ui/ — shadcn/ui primitives
-- public/ — Static assets (icons, images)
-- scripts/ — Utility scripts (e.g., detective.py for offline EDA)
-- styles/ — Additional global CSS
+```
+app/           App Router pages and layout
+components/    Feature components (upload, EDA phases, charts, etc.)
+components/ui/ shadcn/ui primitives
+public/        Static assets (icons, images)
+scripts/       Utility scripts (detective.py for offline EDA)
+styles/        Global CSS
+```
 
-## Key Implementation Notes
+---
 
-- Export Reliability: `html-to-image` is configured with `skipFonts: true` and a safe font stack during capture to avoid SecurityErrors from cross‑origin fonts.
-- Dataset Agnostic EDA: Numeric detection accepts numeric strings; correlations compute only from rows where both columns are valid numbers; missingness computed against total rows.
-- Accessibility: Semantic landmarks, aria labels, keyboard focus support, and tabular numerals for key metrics.
+## Implementation Notes
+
+- Export uses `html-to-image` with `skipFonts: true` and a safe font stack to avoid cross-origin font errors.
+- Numeric detection accepts numeric strings; correlations computed only from valid rows; missingness computed against total rows.
+- Accessibility: semantic landmarks, aria labels, keyboard focus support, and tabular numerals for key metrics.
+
+---
 
 ## Customization
 
@@ -65,10 +70,13 @@ Build:
 - Icons: Replace `/public/icon.jpg` and `/public/apple-touch-icon.jpg` with your logo.
 - Splash & Greeting: Tweak timings and copy in `components/splash.tsx` and `components/welcome-greeting.tsx`.
 
+---
+
 ## Deployment
 
-- GitHub: Commit and push. The repository is clean of build artifacts; `user_read_only_context/` is gitignored.
-- Vercel: Import the GitHub repo and deploy. No special environment variables are required for the base CSV workflow.
+- Vercel: Deploy directly from GitHub. No special environment variables required for base CSV workflow.
+
+---
 
 ## Troubleshooting
 
@@ -78,6 +86,19 @@ Build:
 - Styling issues:
   - Confirm Tailwind v4 is active and your tokens are present in globals.
 
+---
+
 ## License
 
 MIT
+
+---
+
+## Author
+
+**Sai**  
+AI/ML Learner & Full Stack Developer  
+GitHub: [sai-AIstacker](https://github.com/sai-AIstacker)  
+Live App: [dataset-detective.vercel.app](https://dataset-detective.vercel.app/)
+
+---
